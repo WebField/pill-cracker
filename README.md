@@ -1,2 +1,2 @@
 # pill-cracker
-Mobile App for woman to remind them taking the pill
+Mobile App for women to remind them taking the pill
