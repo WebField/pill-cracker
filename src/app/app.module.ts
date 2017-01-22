@@ -1,18 +1,20 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
-import { TabsPage } from '../pages/tabs/tabs';
+import { PillOverviewPage} from '../pages/pill-overview/pill-overview';
+import { PillCrackerPage } from '../pages/pill-cracker/pill-cracker';
+import { MorePopOverPage } from '../pages/menu-pop-over/more-pop-over';
+import { PillHeaderPage } from '../pages/pill-tabs/pill-header';
+import { PillSettingsPage } from '../pages/pill-settings/pill-settings';
 
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TabsPage
+    PillOverviewPage,
+    PillCrackerPage,
+    MorePopOverPage,
+    PillHeaderPage,
+    PillSettingsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -20,10 +22,11 @@ import { TabsPage } from '../pages/tabs/tabs';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TabsPage
+    PillOverviewPage,
+    PillCrackerPage,
+    MorePopOverPage,
+    PillHeaderPage,
+    PillSettingsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

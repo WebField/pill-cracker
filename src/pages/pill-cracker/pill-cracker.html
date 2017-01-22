@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Pill Cracker</ion-title>
+
+        <ion-buttons end>
+            <button ion-button icon-only (click)="openPopOver($event)">
+                <ion-icon name="more"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-item no-lines text-center>
+        <ion-datetime id="datePicker" displayFormat="DD MMM YYYY" [(ngModel)]="pillDate" text-center></ion-datetime>
+    </ion-item>
+
+</ion-content>
