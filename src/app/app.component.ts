@@ -2,14 +2,14 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import { PillHeaderPage } from '../pages/pill-tabs/pill-header';
+import { PillTabs } from '../pages/pill-tabs/pill-tabs';
 
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage = PillHeaderPage;
+  rootPage = PillTabs;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {

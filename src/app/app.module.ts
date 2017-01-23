@@ -1,19 +1,21 @@
-import { NgModule, ErrorHandler } from '@angular/core';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { MyApp } from './app.component';
-import { PillOverviewPage} from '../pages/pill-overview/pill-overview';
-import { PillCrackerPage } from '../pages/pill-cracker/pill-cracker';
-import { MorePopOverPage } from '../pages/menu-pop-over/more-pop-over';
-import { PillHeaderPage } from '../pages/pill-tabs/pill-header';
-import { PillSettingsPage } from '../pages/pill-settings/pill-settings';
+import {NgModule, ErrorHandler} from '@angular/core';
+import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
+import {MyApp} from './app.component';
+import {PillOverviewPage} from '../pages/pill-overview/pill-overview';
+import {PillCrackerPage} from '../pages/pill-cracker/pill-cracker';
+import {MenuPopOverComponent} from '../components/menu-pop-over/menu-pop-over';
+import {PillTabs} from '../pages/pill-tabs/pill-tabs';
+import {PillSettingsPage} from '../pages/pill-settings/pill-settings';
+import {PillHeaderComponent} from "../components/pill-header/pill-header";
 
 @NgModule({
   declarations: [
     MyApp,
+    PillTabs,
     PillOverviewPage,
     PillCrackerPage,
-    MorePopOverPage,
-    PillHeaderPage,
+    MenuPopOverComponent,
+    PillHeaderComponent,
     PillSettingsPage
   ],
   imports: [
@@ -22,12 +24,14 @@ import { PillSettingsPage } from '../pages/pill-settings/pill-settings';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    PillTabs,
     PillOverviewPage,
     PillCrackerPage,
-    MorePopOverPage,
-    PillHeaderPage,
+    MenuPopOverComponent,
+    PillHeaderComponent,
     PillSettingsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
-export class AppModule {}
+export class AppModule {
+}

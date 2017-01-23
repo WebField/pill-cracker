@@ -10,4 +10,11 @@
 
 <ion-content padding>
 
+  <ion-item>
+    <ion-label>Pill Type</ion-label>
+    <ion-select [(ngModel)]="selectedPill" >
+      <ion-option *ngFor="let type of pillTypes" value="{{type.value}}">{{type.value}}</ion-option>
+    </ion-select>
+  </ion-item>
+
 </ion-content>
