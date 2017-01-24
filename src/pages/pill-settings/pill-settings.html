@@ -1,20 +1,57 @@
-
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>Einstellungen</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
 
-  <ion-item>
-    <ion-label>Pill Type</ion-label>
-    <ion-select [(ngModel)]="selectedPill" >
-      <ion-option *ngFor="let type of pillTypes" value="{{type.value}}">{{type.value}}</ion-option>
-    </ion-select>
-  </ion-item>
+  <ion-item-group>
+    <ion-item-divider color="light">
+      Pill
+    </ion-item-divider>
+    <!-- Pill Type -->
+    <ion-item>
+      <ion-label>Pill Type</ion-label>
+      <ion-select [(ngModel)]="selectedPill">
+        <ion-option *ngFor="let type of pillTypes" value="{{type.value}}">{{type.value}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- First pill date -->
+    <ion-item>
+
+      <ion-label>First pill date</ion-label>
+      <ion-datetime [(ngModel)]="firstPillDate"></ion-datetime>
+    </ion-item>
+    <!-- Placebo pills -->
+
+    <ion-item>
+      <ion-label>Placebo pills</ion-label>
+      <ion-toggle [(ngModel)]="placebo"></ion-toggle>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group>
+    <ion-item-divider color="light">
+      Reminder
+    </ion-item-divider>
+
+    <!-- Reminder time -->
+    <ion-item>
+      <ion-label>Reminder Time</ion-label>
+      <ion-datetime [(ngModel)]="reminderTime" displayFormat="HH:mm" pickerFormat="HH mm"></ion-datetime>
+    </ion-item>
+
+    <!-- Reminder text -->
+    <ion-item>
+      <ion-label>Reminder text</ion-label>
+      <ion-input placeholder="Your reminder text" text-right></ion-input>
+    </ion-item>
+
+  </ion-item-group>
 
 </ion-content>

@@ -8,7 +8,10 @@ import {NavController, NavParams} from 'ionic-angular';
 })
 export class PillSettingsPage {
   selectedPill: string;
+  firstPillDate: string = new Date().toISOString();
+  placebo: boolean;
   pillTypes: {}[];  //Array of Objects
+  reminderTime: string = new Date().toISOString();
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.pillTypes = [
